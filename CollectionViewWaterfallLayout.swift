@@ -79,13 +79,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     }
     
     //MARK: Private Properties
-    private weak var prefferedDelegate: CollectionViewWaterfallLayoutDelegate!
-    private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
-        get {
-            return prefferedDelegate ??
-                (collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate)
-        }
-    }
+    private weak var delegate: CollectionViewWaterfallLayoutDelegate?
     private var columnHeights = [Float]()
     private var sectionItemAttributes = [[UICollectionViewLayoutAttributes]]()
     private var allItemAttributes = [UICollectionViewLayoutAttributes]()
@@ -95,16 +89,17 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.delegate = collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate
     }
     
     override public init() {
         super.init()
+        self.delegate = collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate
     }
     
     convenience public init(delegate: CollectionViewWaterfallLayoutDelegate) {
         self.init()
-        
-        prefferedDelegate = delegate
+        self.delegate = delegate
     }
     
     //MARK: UICollectionViewLayout Methods
