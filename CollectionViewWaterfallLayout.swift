@@ -79,7 +79,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     }
     
     //MARK: Private Properties
-    private weak var prefferedDelegate: CollectionViewWaterfallLayoutDelegate!
+    private weak var prefferedDelegate: CollectionViewWaterfallLayoutDelegate?
     private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
         get {
             return prefferedDelegate ??
@@ -103,7 +103,6 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     
     convenience public init(delegate: CollectionViewWaterfallLayoutDelegate) {
         self.init()
-        
         prefferedDelegate = delegate
     }
     
