@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CollectionViewWaterfallLayout"
-  s.version      = "0.2.2"
+  s.version      = "0.3.1"
   s.summary      = "Pinterest inspired layout for UICollectionViews written in Swift"
   # s.description  = <<-DESC
   s.homepage     = "https://github.com/ecerney/CollectionViewWaterfallLayout"
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CollectionViewWaterfallLayout.swift"
+  s.source_files  = "CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.swift"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

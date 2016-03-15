@@ -1,0 +1,14 @@
+PODS:
+  - CollectionViewWaterfallLayout (0.3.1)
+
+DEPENDENCIES:
+  - CollectionViewWaterfallLayout (from `../`)
+
+EXTERNAL SOURCES:
+  CollectionViewWaterfallLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CollectionViewWaterfallLayout: cf4635a1456bbed9712aca8f77e9ecf53260b9de
+
+COCOAPODS: 0.39.0
