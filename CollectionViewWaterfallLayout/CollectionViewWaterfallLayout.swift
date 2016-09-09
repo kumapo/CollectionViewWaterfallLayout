@@ -271,7 +271,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
             idx = min(idx + unionSize, itemCounts) - 1
             let rect2 = allItemAttributes[idx].frame
             unionRects.append(CGRectUnion(rect1, rect2))
-            ++idx
+            idx += 1
         }
     }
     
@@ -329,7 +329,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
                 break
             }
         }
-        for var i = begin; i < end; i++ {
+        for i in begin ..< end {
             let attr = allItemAttributes[i]
             if CGRectIntersectsRect(rect, attr.frame) {
                 attrs.append(attr)
